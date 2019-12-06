@@ -28,11 +28,7 @@ def try_it():
     modelFileLocation = result['modelFileLocation']
     inputFileLocation = result['inputFileLocation']
 
-    with open(inputFileLocation, 'r') as myfile:
-        data = myfile.readlines()
-        print("Input data :: ", data)
-    
-    cmd = 'python3 ' + modelFileLocation + ' ' + data[0].replace('\n', '') + ' ' + data[1].replace('\n', '') + ' ' + data[2].replace('\n', '')
+    cmd = 'python3 /Users/atiagarw/tli/py_scripts/main.py ' + modelFileLocation + ' ' + inputFileLocation
     print('Command running :: ', cmd)
 
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)

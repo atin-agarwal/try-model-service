@@ -28,7 +28,7 @@ def try_it():
     modelFileLocation = result['modelFileLocation']
     inputFileLocation = result['inputFileLocation']
 
-    cmd = 'python3 /Users/atiagarw/tli/py_scripts/main.py ' + modelFileLocation + ' ' + inputFileLocation
+    cmd = 'python3 main.py ' + modelFileLocation + ' ' + inputFileLocation
     print('Command running :: ', cmd)
 
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
